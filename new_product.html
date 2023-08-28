@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK İletişim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="header__app">
+            <div class="logo">
+                <h1>MK İletişim</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stock.html">Stock</a></li>
+                    <li><a href="new_product.html">New Product</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="header__mobil">
+            <div class="container"> 
+               <nav class="navbar">
+                  <h1>MK İletişim</h1>
+                  <ul class="nav-menu">
+                     <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="stock.html" class="nav-link">Stock</a>
+                     </li>
+                  </ul>
+                  <div class="hamburger">
+                     <span class="bar"></span>
+                     <span class="bar"></span>
+                     <span class="bar"></span>
+                  </div>
+               </nav>
+            </div>
+        </section>
+    </header>
+
+    <main class="new__product" id="product__phone">
+
+        <section class="new__title">
+            <h2>Yeni Ürün Bilgileri</h2>
+        </section>
+        
+        <section class="new__content">
+            <form>
+                <div class="form__brand">
+                    <h3>Marka:</h3>
+                    <input type="text" placeholder="Marka" class="input__text" id="text__brand">
+                </div>
+                <div class="form__model">
+                    <h3>Model:</h3>
+                    <input type="text" placeholder="Model" class="input__text" id="text__model">
+                </div>
+            </form>
+            <form>
+                <div class="form__price">
+                    <h3>Fiyat:</h3>
+                    <input type="text" placeholder="Fiyat" class="input__text" id="text__price">
+                </div>
+                <div class="form__piece">
+                    <h3>Adet:</h3>
+                    <input type="text" placeholder="Adet" class="input__text" id="text__piece">
+                </div>
+            </form>
+        </section>
+
+        <section class="new__button">
+            <input type="button" id="new__btn" value="Ekle" class="button">
+        </section>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
