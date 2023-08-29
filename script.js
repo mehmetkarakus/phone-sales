@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const apiBaseUrl = 'https://64e3c5a2bac46e480e792c58.mockapi.io/phone_sales';
+    const apiBaseUrl = 'https://64ed37e0f9b2b70f2bfb567c.mockapi.io/new_project';
 
     const addbtn = document.querySelector('#new__btn');
     addbtn.addEventListener('click', () => {
@@ -119,10 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const priceCell = tr.querySelector(".new-price");
             const pieceCell = tr.querySelector(".new-piece");
 
-            const brandInput = Editcell(brandCell);
-            const modelInput = Editcell(modelCell);
-            const priceInput = Editcell(priceCell);
-            const pieceInput = Editcell(pieceCell);
+            const brandInput = EditCell(brandCell);
+            const modelInput = EditCell(modelCell);
+            const priceInput = EditCell(priceCell);
+            const pieceInput = EditCell(pieceCell);
 
             const editButton = tr.querySelector(".edit");
             editButton.textContent = "Save";
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     piece: updatedPiece,
                 }
 
-                fetch(`https://64e3c5a2bac46e480e792c58.mockapi.io/phone_sales${taskId}`, {
+                fetch(`https://64ed37e0f9b2b70f2bfb567c.mockapi.io/new_project${taskId}`, {
                     method: "PUT",
                     headers: { "content-type": "application/json" },
                     body: JSON.stringify(updateTaskData),
@@ -188,19 +188,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderProductRow(product) {
         const productTable = document.getElementById("product__phone");
-        console.log('Tuna', productTable)
+        console.log('Çıktı 1', productTable)
         const newRow = productTable.insertRow();
-        console.log('Sikerim', newRow);
+        console.log('Çıktı 2', newRow);
         const brand = newRow.insertCell(0)
         const model = newRow.insertCell(0)
         const price = newRow.insertCell(0)
         const piece = newRow.insertCell(0)
         const stuation = newRow.insertCell(0)
         console.log(product);
-        brand.innerHtml = `${product.brand}`
-        model.innerHtml = `${product.model}`
-        price.innerHtml = `${product.price}`
-        piece.innerHtml = `${product.piece}`
+        brand.innerHTML = `${product.brand}`
+        model.innerHTML = `${product.model}`
+        price.innerHTML = `${product.price}`
+        piece.innerHTML = `${product.piece}`
+        stuation.innerHTML = `${product.deleteSpan}`
     }
 
     function loadProductsFromLocalStorage() {
@@ -220,61 +221,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function phonesales() {
-
         const productBrand = document.querySelector("#text__brand");
         const productModel = document.querySelector("#text__model");
         const productPrice = document.querySelector("#text__price");
         const productPiece = document.querySelector("#text__piece");
-
+    
         if (productBrand.value.trim() === "") {
             console.log("Marka Boş Bırakılamaz.");
             alert("Lütfen Marka Alanını Doldurun.");
             return;
         }
-
+    
         if (productModel.value.trim() === "") {
             console.log("Model Boş Bırakılamaz.");
             alert("Lütfen Model Alanını Doldurun.");
             return;
         }
-
+    
         if (productPrice.value.trim() === "") {
             console.log("Fiyat Boş Bırakılamaz.");
             alert("Lütfen Fiyat Alanını Doldurun.");
             return;
         }
-
+    
         if (productPiece.value.trim() === "") {
             console.log("Adet Boş Bırakılamaz.");
             alert("Lütfen Adet Alanını Doldurun.");
             return;
         }
-
+    
         const newTask = {
             brand: productBrand.value,
             model: productModel.value,
             price: productPrice.value,
             piece: productPiece.value,
         };
-
-        fetch(`${apiBaseUrl}`, {
+    
+        fetch(apiBaseUrl, {
             method: "POST",
-            headers: { "content-type": "application/json" },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newTask),
         })
             .then((res) => res.json())
             .then((product) => {
                 console.log("Yeni Ürün Ekle: ", product);
                 renderProductRow(product);
-                const savendProducts = localStorage.getItem("products");
+                const savedProducts = localStorage.getItem("products");
                 const products = savedProducts ? JSON.parse(savedProducts) : [];
                 products.push(product);
                 saveProductsToLocalStorage(products);
             })
             .catch((error) => {
-                console.error("error:", error);
+                console.error("Error:", error);
             });
-
+    
         productBrand.value = "";
         productModel.value = "";
         productPrice.value = "";
