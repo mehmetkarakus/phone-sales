@@ -304,27 +304,26 @@ input.input__text {
     display: none;
 }
 
-.edit {
-    background-color: rgb(19, 19, 238);
-    color: aliceblue;
-    padding: 0.5rem;
-    border-radius: 10%;
-    margin-right: 1.25rem;
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.delete {
-    background-color: red;
-    color: aliceblue;
-    padding: 0.5rem;
-    border-radius: 10%;
+.ayrac{
+    margin-left: 15px;
+    color: #fff;
 }
 
-tr,
-td {
-    border: 1px solid gray;
-    padding: 0.625rem;
-    width: auto;
-    text-align: left;
+.user__record a {
+    padding: 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.user__record p {
+    padding: 15px;
+    color: #fff;
 }
 
 @media (max-width: 1024px) {
