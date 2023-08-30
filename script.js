@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    //Modil tasarımda kullandığım hamburger menü
+
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
     hamburger.addEventListener("click", test);
@@ -13,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }));
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Anasayfada Kulladığım accordion
 
     var acc = document.getElementsByClassName("accordion");
 
@@ -28,27 +34,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Üye giriş sayfasında üye ol ve üye giriş menüsü
+
     let navtabs = document.querySelectorAll('.sliderTab');
     navtabs.forEach(item => {
-        item.addEventListener('click', function(event){
-            if(event.target.classList.contains('nav-item')){
-               
+        item.addEventListener('click', function (event) {
+            if (event.target.classList.contains('nav-item')) {
+
                 let lastActive = item.querySelector('li.active');
                 let newActive = event.target;
                 let bgActive = item.querySelector('.bg-active');
-    
+
                 lastActive.classList.remove('active');
                 newActive.classList.add('active');
                 bgActive.style.left = newActive.offsetLeft + 'px';
-    
+
                 let lastContentActive = item.querySelector('.tab.active');
                 let newContentActive = document.getElementById(newActive.dataset.target);
                 lastContentActive.classList.remove('active');
                 newContentActive.classList.add('active');
-    
+
             }
         })
     })
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Mock Api ile ürünü tabloya eklediğim kodlar
 
     const apiBaseUrl = 'https://64ed37e0f9b2b70f2bfb567c.mockapi.io/new_project';
 
@@ -247,38 +261,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const productModel = document.querySelector("#text__model");
         const productPrice = document.querySelector("#text__price");
         const productPiece = document.querySelector("#text__piece");
-    
+
         if (productBrand.value.trim() === "") {
             console.log("Marka Boş Bırakılamaz.");
             alert("Lütfen Marka Alanını Doldurun.");
             return;
         }
-    
+
         if (productModel.value.trim() === "") {
             console.log("Model Boş Bırakılamaz.");
             alert("Lütfen Model Alanını Doldurun.");
             return;
         }
-    
+
         if (productPrice.value.trim() === "") {
             console.log("Fiyat Boş Bırakılamaz.");
             alert("Lütfen Fiyat Alanını Doldurun.");
             return;
         }
-    
+
         if (productPiece.value.trim() === "") {
             console.log("Adet Boş Bırakılamaz.");
             alert("Lütfen Adet Alanını Doldurun.");
             return;
         }
-    
+
         const newTask = {
             brand: productBrand.value,
             model: productModel.value,
             price: productPrice.value,
             piece: productPiece.value,
         };
-    
+
         fetch(apiBaseUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -296,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch((error) => {
                 console.error("Error:", error);
             });
-    
+
         productBrand.value = "";
         productModel.value = "";
         productPrice.value = "";

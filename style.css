@@ -11,23 +11,7 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-.contact {
-    background-color: #1e1e1e;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 15px;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    padding: 5px;
-}
-
-.phone__number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
+/* Header Kulladığım CSS kodları */
 
 .header {
     display: flex;
@@ -48,11 +32,76 @@ section.header__app {
 .user__in {
     display: flex;
     flex-direction: column;
+    font-size: 14px;
 }
 
 .user__record i {
     padding-left: 5px;
 }
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ayrac {
+    margin-left: 15px;
+    color: #fff;
+}
+
+.user__record a {
+    padding: 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.user__record p {
+    padding: 15px;
+    color: #fff;
+}
+
+main.user {
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.user__information {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user__baslik {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Anasayfada kullandığım CSS kodları */
+
+.contact {
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
+
+.phone__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
 
 .header__mobil {
     display: none;
@@ -182,6 +231,8 @@ h3 {
     padding: 15px;
 }
 
+/* Product Sayfasında Kullandığım CSS kodları*/
+
 main.stock {
     margin: 80px;
 }
@@ -190,14 +241,6 @@ main.stock {
     display: flex;
     justify-content: flex-end;
     margin: 50px 0;
-}
-
-.stock__button {
-    padding: 15px;
-    background-color: #0998eb;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
 }
 
 .stock__content {
@@ -213,6 +256,7 @@ table {
 tr td {
     border: 2px solid #dddd;
     padding: 20px 40px;
+    text-align: center;
 }
 
 table tr td:nth-child(1) {
@@ -255,6 +299,8 @@ table tr td:nth-child(5) {
     color: #fff;
 }
 
+/* Yeni Ürün Ekle Sayafasında Kullandığım CSS Kodaları */
+
 main.new__product {
     margin: 80px;
     display: flex;
@@ -287,91 +333,24 @@ input.input__text {
     color: #fff;
 }
 
-.navbar {
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-branding {
-    font-size: 2rem;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-}
-
-.nav-link {
-    transition: 0.3s ease-out;
-}
-
-.nav-link:hover {
-    color: dodgerblue;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background-color: white;
-}
-
 .sidebar__mobil {
     display: none;
 }
 
-.user {
+section.new__product {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-.ayrac {
-    margin-left: 15px;
-    color: #fff;
+button.new__product.new__button {
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    background-color: #65d12a;
+    border: none;
+    color: #000;
 }
 
-.user__record a {
-    padding: 0;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.user__record p {
-    padding: 15px;
-    color: #fff;
-}
-
-main.user {
-    margin: 80px;
-    display: flex;
-    justify-content: center;
-}
-
-.user__information {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.user__baslik {
-    display: flex;
-    justify-content: center;
-}
+/* Üye giriş ve üye ol sayfasının CSS kodları */
 
 .nav-tabs {
     padding: 0;
@@ -396,8 +375,6 @@ li.nav-item {
     transition: 0.5s;
     cursor: pointer;
 }
-
-
 
 .nav-item:nth-last-child(1) {
     border-right: none;
@@ -447,6 +424,35 @@ li.nav-item {
         transform: translateY(0);
     }
 }
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__name {
+    display: flex;
+    padding-bottom: 10px;
+    gap: 10px;
+}
+
+input.form__input {
+    padding: 10px;
+}
+
+input.form2__input {
+    padding: 10px;
+    width: 94%;
+}
+
+.form__2 {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+/*Mobil tasarım CSS Kodları*/
 
 @media (max-width: 1024px) {
 
