@@ -45,7 +45,7 @@ section.header__app {
     justify-content: space-evenly;
 }
 
-.user__in{
+.user__in {
     display: flex;
     flex-direction: column;
 }
@@ -332,13 +332,13 @@ input.input__text {
     display: none;
 }
 
-.user{
+.user {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.ayrac{
+.ayrac {
     margin-left: 15px;
     color: #fff;
 }
@@ -349,23 +349,103 @@ input.input__text {
     display: flex;
     align-items: center;
 }
+
 .user__record p {
     padding: 15px;
     color: #fff;
 }
 
-main.user{
+main.user {
     margin: 80px;
     display: flex;
     justify-content: center;
 }
 
-.user__information{
-    background-color: #0998eb;
+.user__information {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 4px;
+}
+
+.user__baslik {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-tabs {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    gap: 20px;
+}
+
+li.nav-item {
+    color: #c8c7cc;;
+    padding: 10px 50px;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+.nav-item:nth-last-child(1) {
+    border-right: none;
+}
+
+.nav-item.active {
+    color: #000;
+}
+
+.bg-active{
+    border-bottom: 2px solid;
+    background-color: rgba(0,0,0,0);
+    border-color: #f58220;
+    padding-bottom: 30px;
+    width: 175px;
+    position: absolute;
+    left: 17px;
+    height: 20%;
+    transition: 0.5s;
+}
+
+.content-tabs {
+    padding: 30px;
+    color: #555;
+    border-top-left-radius: 0;
+    min-height: 300px;
+    text-align: justify;
+}
+
+.content-tabs .tab {
+    display: none;
+}
+
+.content-tabs .tab.active {
+    display: block;
+    animation: showContent 0.5s ease-in-out 1;
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 1024px) {
