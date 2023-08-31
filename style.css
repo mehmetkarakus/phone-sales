@@ -11,7 +11,7 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Header Kulladığım CSS kodları */
+/* Header Kulladığım CSS Kodları */
 
 .header {
     display: flex;
@@ -81,7 +81,7 @@ main.user {
     margin-bottom: 20px;
 }
 
-/* Anasayfada kullandığım CSS kodları */
+/* Anasayfada Kullandığım CSS Kodları */
 
 .contact {
     background-color: #1e1e1e;
@@ -117,13 +117,12 @@ main.user {
     align-items: center;
 }
 
-li,
-a {
-    font-size: 25px;
+li, a {
+    font-size: 20px;
     list-style: none;
     text-decoration: none;
     color: #fff;
-    padding: 20px;
+    padding: 15px;
 }
 
 main.home {
@@ -180,6 +179,7 @@ main.home {
 
 .detay__ad {
     padding: 10px;
+    font-size: 15px;
 }
 
 .content {
@@ -231,7 +231,7 @@ h3 {
     padding: 15px;
 }
 
-/* Product Sayfasında Kullandığım CSS kodları*/
+/* Product Sayfasında Kullandığım CSS Kodları*/
 
 main.stock {
     margin: 80px;
@@ -350,7 +350,7 @@ button.new__product.new__button {
     color: #000;
 }
 
-/* Üye giriş ve üye ol sayfasının CSS kodları */
+/* Üye Giriş ve Üye Ol Sayfasının CSS Kodları */
 
 .nav-tabs {
     padding: 0;
@@ -515,7 +515,78 @@ button.onay__btn {
     color: #000;
 }
 
-/*Mobil tasarım CSS Kodları*/
+/*Sepet Sayfasında Kulladığım CSS Kodları*/
+
+main.shopping{
+    margin: 80px;
+}
+
+section.sepet {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alisveris__detay {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 5;
+}
+
+.urun__detay {
+    display: flex;
+    width: 100%;
+}
+
+.urun__aciklama {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.alisveris__tamamla {
+    flex-grow: 3;
+    background-color: #cdcdcd;
+}
+
+.alisveris__sonuc {
+    padding: 30px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.alisveris__sonuc p{
+    font-size: 12px;
+}
+
+.kdv__fiyat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sepet__tamamla {
+    padding: 30px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button.siparis__onayla {
+    background-color: #65d12a;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.aciklama__detay p {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/*Mobil Tasarım CSS Kodları*/
 
 @media (max-width: 1024px) {
 

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    //Modil tasarımda kullandığım hamburger menü
+    //Modil Tasarımda Kullandığım Hamburger Menü
 
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //Anasayfada Kulladığım accordion
+    //Anasayfada Kulladığım Accordion
 
     var acc = document.getElementsByClassName("accordion");
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //Üye giriş sayfasında üye ol ve üye giriş menüsü
+    //Üye Giriş Sayfasında Üye Ol ve Üye Giriş Menüsü
 
     let navtabs = document.querySelectorAll('.sliderTab');
     navtabs.forEach(item => {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //Üye ol ve üye giriş sayfasında Kulladığım accordion
+    //Üye Ol ve Üye Giriş Sayfasında Kulladığım Accordion
 
     var acc = document.getElementsByClassName("checkbox__accordion");
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
    
-    //Mock Api ile ürünü tabloya eklediğim kodlar
+    //Mock Api ile Ürünü Tabloya Eklediğim Kodlar
 
     const apiBaseUrl = 'https://64ed37e0f9b2b70f2bfb567c.mockapi.io/new_project';
 
