@@ -452,6 +452,69 @@ input.form2__input {
     padding-bottom: 10px;
 }
 
+.checkbox{
+    width: 100%;
+}
+
+.checkbox__user {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 390px;
+}
+
+.checkbox__accordion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+    max-width: 390px;
+    margin: 10px 0;
+
+}
+
+.box1 {
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.box2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.user__panel {
+    display: none;
+    max-width: 390px;
+    font-size: 12px;
+}
+
+li.li__checkbox {
+    font-size: 12px;
+    color: #767676;
+    padding: 10px;
+}
+
+input.input__checkbox {
+    margin-right: 10px;
+}
+
+.user__button {
+    width: 100%;
+}
+
+button.onay__btn {
+    background-color: #65d12a;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 20px;
+    color: #000;
+}
+
 /*Mobil tasarım CSS Kodları*/
 
 @media (max-width: 1024px) {

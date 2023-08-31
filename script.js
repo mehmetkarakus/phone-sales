@@ -62,6 +62,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //Üye ol ve üye giriş sayfasında Kulladığım accordion
+
+    var acc = document.getElementsByClassName("checkbox__accordion");
+
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+   
     //Mock Api ile ürünü tabloya eklediğim kodlar
 
     const apiBaseUrl = 'https://64ed37e0f9b2b70f2bfb567c.mockapi.io/new_project';
