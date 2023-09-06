@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MK İletişim</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/ad5b8232d1.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,44 +79,60 @@
         </section>
     </header>
 
-    <main class="new__product" id="product__phone">
+    <main>
 
-        <section class="new__title">
-            <h2>Yeni Ürün Bilgileri</h2>
-        </section>
-        
-        <section class="new__content">
-            <form>
-                <div class="form__brand">
-                    <h3>Marka:</h3>
-                    <input type="text" placeholder="Marka" class="input__text" id="text__brand">
-                </div>
-                <div class="form__model">
-                    <h3>Model:</h3>
-                    <input type="text" placeholder="Model" class="input__text" id="text__model">
-                </div>
-            </form>
-            <form>
-                <div class="form__price">
-                    <h3>Fiyat:</h3>
-                    <input type="text" placeholder="Fiyat" class="input__text" id="text__price">
-                </div>
-                <div class="form__piece">
-                    <h3>Adet:</h3>
-                    <input type="text" placeholder="Adet" class="input__text" id="text__piece">
-                </div>
-            </form>
-        </section>
+        <section class="new">
 
-        <section class="new__button">
-            <input type="button" id="new__btn" value="Ekle" class="button">
-        </section>
+            <section class="new-product">
 
+                <div class="product__baslik">
+                    <h2>Yeni Ürün Bilgileri</h2>
+                </div>
+
+                <div class="form">
+                    <div class="form__1">
+                        <label for="">Marka</label>
+                        <div class="dropdown">
+                            <button id="dropdownButton">Marka</button>
+                            <div class="dropdown-content" id="myDropdown">
+                                <!-- Açılır menü içeriği js ile giriliyor -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__2">
+                        <div class="form__box__1">
+                            <label for="">Model</label>
+                            <input type="text" id="text__model" placeholder="Model">
+
+                        </div>
+                        <div class="form__box__2">
+                            <label for="">Hafıza</label>
+                            <input type="text" id="text__memory" placeholder="Hafıza">
+
+                        </div>
+                    </div>
+                    <div class="form__3">
+                        <div class="form__box__3">
+                            <label for="">Adet</label>
+                            <input type="text" id="text__piece" placeholder="Adet">
+                        </div>
+                        <div class="form__box__4">
+                            <label for="">Fiyat</label>
+                            <input type="text" id="text__price" placeholder="Fiyat">
+                        </div>
+                    </div>
+                    <div class="form__4">
+                        <button class="form__button" id="new__ekle">Ekle</button>
+                    </div>
+                </div>
+            </section>
+
+        </section>
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="js/new-product.js"></script>
+    <script src="js/mobile.js"></script>
 </body>
 
 </html>
-

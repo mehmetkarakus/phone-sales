@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MK İletişim</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/ad5b8232d1.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,27 +79,33 @@
         </section>
     </header>
 
-    <main class="stock" id="new__btn">
-        <section class="new__product">
-            <a href="new_product.html">
-                <button class="new__product new__button" value="Yeni Ürün">Yeni Ürün</button>
-            </a>
-        </section>
-        <section class="stock__content">
-            <table class="table__product">
-                <tbody id="product__phone">
-                    <tr>
-                        <td>Marka</td>
-                        <td>Model</td>
-                        <td>Fiyat</td>
-                        <td>Adet</td>
-                        <td>Durum</td>
-                    </tr>
-                </tbody>
-            </table>
+    <main class="stock">
+        <section class="table">
+
+            <section class="button">
+                <button class="product__button"><a href="new-product.html">Yeni Ürün Ekle</a></button>
+            </section>
+
+            <section class="product__table">
+                <table class="table__about" id="posts-table">
+                    <thead>
+                        <tr>
+                            <td>Marka</td>
+                            <td>Model</td>
+                            <td>Hafıza</td>
+                            <td>Fiyat</td>
+                            <td>Adet</td>
+                            <td>Durum</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/mobile.js"></script>
 </body>
 
 </html>

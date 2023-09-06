@@ -101,8 +101,6 @@ main.user {
     gap: 5px;
 }
 
-
-
 .header__mobil {
     display: none;
 }
@@ -215,17 +213,6 @@ h3 {
     justify-content: end;
 }
 
-.button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    background-color: #0998eb;
-    color: #fff;
-
-}
-
 .card__about h2 {
     border-bottom: 1.5px solid #ddd;
     padding-bottom: 15px;
@@ -266,22 +253,36 @@ li.brand__li {
     width: 50px;
 }
 
-
 /* Product Sayfasında Kullandığım CSS Kodları*/
 
 main.stock {
     margin: 80px;
 }
 
-.stock__head {
-    display: flex;
-    justify-content: flex-end;
-    margin: 50px 0;
+section.table {
+    width: 100%;
 }
 
-.stock__content {
+section.button {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin: 30px 0;
+}
+
+button.product__button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+button.product__button a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.product__table {
+    padding: 30px 0;
 }
 
 table {
@@ -290,100 +291,134 @@ table {
 }
 
 tr td {
-    border: 2px solid #dddd;
+    border: 2px solid #ccc;
     padding: 20px 40px;
     text-align: center;
 }
 
-table tr td:nth-child(1) {
-    width: 25%;
-}
-
-table tr td:nth-child(2) {
-    width: 25%;
-}
-
-table tr td:nth-child(3) {
-    width: 15%;
-}
-
-table tr td:nth-child(4) {
-    width: 15%;
-}
-
-table tr td:nth-child(5) {
-    width: 20%;
-}
-
-.arka__plan {
-    background-color: #eee;
-}
-
-.duzenle {
-    padding: 5px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: green;
-    color: #fff;
-}
-
-.sil {
-    padding: 5px 30px;
-    border: none;
-    border-radius: 5px;
-    background-color: red;
-    color: #fff;
-}
-
 /* Yeni Ürün Ekle Sayafasında Kullandığım CSS Kodaları */
 
-main.new__product {
-    margin: 80px;
+section.new {
+    width: 100%;
+}
+
+section.new-product {
+    padding: 30px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    align-content: center;
     align-items: center;
 }
 
-form {
+.form {
+    width: 440px;
+    padding-top: 30px;
+}
+
+.form__1 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    padding-bottom: 15px;
+    gap: 15px
 }
 
-input.input__text {
-    margin: 30px;
-    padding: 10px;
+.form label {
+    font-size: 18px;
 }
 
-.new__title {
+.form__1 input {
+    padding: 16px;
+    border: 1px solid #ccc;
+}
+
+.dropdown button {
+    padding: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
     display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+    justify-content: flex-start;
+
 }
 
-.new__btn {
-    padding: 10px 30px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(0, 110, 255);
-    color: #fff;
-}
-
-.sidebar__mobil {
+.dropdown-content {
     display: none;
+    max-height: 120px;
+    overflow-y: scroll;
+    width: 100%;
 }
 
-section.new__product {
+.dropdown-content a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 1px solid #dddd;
+    color: #000;
+    padding: 10px;
+    background-color: #cccc;
+    font-size: 15px;
+}
+
+.form__2 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.form__box__1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form__box__2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form__2 input {
+    padding: 16px;
+    border: 1px solid #ccc;
+}
+
+.form__3 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.form__box__3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form__box__4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form__3 input {
+    padding: 16px;
+    border: 1px solid #ccc;
+}
+
+.form__4 {
     display: flex;
     justify-content: flex-end;
 }
 
-button.new__product.new__button {
-    padding: 10px 30px;
-    margin-bottom: 20px;
-    background-color: #65d12a;
+button.form__button {
+    padding: 5px 30px;
     border: none;
-    color: #000;
+    border-radius: 5px;
 }
 
 /* Üye Giriş ve Üye Ol Sayfasının CSS Kodları */
@@ -461,11 +496,11 @@ li.nav-item {
     }
 }
 
-
-.form {
+.user__form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .form__name {
@@ -483,9 +518,10 @@ input.form2__input {
     width: 94%;
 }
 
-.form__2 {
+.user__form__2 {
     width: 100%;
     padding-bottom: 10px;
+    
 }
 
 .checkbox{
