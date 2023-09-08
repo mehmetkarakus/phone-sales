@@ -34,16 +34,17 @@ function populateDropdown() {
 const addbtn = document.querySelector('#new__ekle');
 addbtn.addEventListener('click', () => {
     const selectedOption = dropdownButton.textContent;
-    productTable(selectedOption)
+    const productsButton = document.querySelector("span");
+    productTable(selectedOption , productsButton.innerHTML)
 })
 
-function productTable(selectedOption) {
+function productTable(selectedOption, productsButton) {
     const productBrand = selectedOption;
     const productModel = document.querySelector("#text__model");
     const productMemory = document.querySelector("#text__memory");
     const productPrice = document.querySelector("#text__price");
     const productPiece = document.querySelector("#text__piece");
-    const productSituation = document.querySelector("#text__situation");
+    const productSituation = productsButton;
 
     if (productBrand.value === "") {
         console.log("Marka Boş Bırakılamaz.");
@@ -81,6 +82,7 @@ function productTable(selectedOption) {
         memory: productMemory.value,
         price: productPrice.value,
         piece: productPiece.value,
+        situation: productSituation,
     };
 
     fetch("https://64f8ea0d824680fd21803114.mockapi.io/phone-sales/phone-sales", {
@@ -96,8 +98,8 @@ function productTable(selectedOption) {
         .catch((error) => {
             console.error("Hata: ", error);
         });
-    
-    productBrand.value = "";    
+
+    productBrand.value = "";
     productModel.value = "";
     productMemory.value = "";
     productPrice.value = "";
@@ -112,6 +114,8 @@ function renderProductRow(product) {
         <td>${product.memory}</td>
         <td>${product.price}</td>
         <td>${product.piece}</td>
+        <td>${product.situation}</td>
     `;
-    productTable.appendChild(row);
+
 }
+
